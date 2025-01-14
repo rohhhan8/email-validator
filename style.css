@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5ebfa; /* Light background */
+    color: #49225b; /* Dark text color */
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #49225b; /* Dark purple */
+    color: white;
+    padding: 15px 10%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .logo img {
+    width: 30px;
+    filter: invert(1);
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #a56abd; /* Lighter purple for hover */
+    color: white;
+}
+
+main {
+    padding: 60px 10%;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #49225b; /* Dark purple */
+    margin-bottom: 20px;
+}
+
+input[type='text'] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #a56abd; /* Lighter purple */
+    border-radius: 6px;
+    font-size: 18px;
+    outline: none;
+    margin-bottom: 30px;
+    transition: border-color 0.3s ease;
+}
+
+input[type='text']:focus {
+    border-color: #49225b; /* Dark purple focus */
+}
+
+.btn {
+    background: #49225b; /* Dark purple */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background: #a56abd; /* Lighter purple hover */
+}
+
+#resultCont {
+    margin-top: 30px;
+    /* display: flex; */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.result-box {
+    flex: 1 1 calc(33% - 20px);
+    max-width: calc(33% - 20px);
+    background: #f5ebfa; /* Light background for result box */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.result-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.result-box h3 {
+    font-size: 1.2rem;
+    color: #49225b; /* Dark purple */
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    font-size: 0.9rem;
+    color: #49225b; /* Dark purple text */
+    line-height: 1.6;
+}
+
+.result-box .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #a56abd; /* Lighter purple */
+    color: white;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.result-box .btn:hover {
+    background: #49225b; /* Dark purple hover */
+}
+
+footer {
+    font-size: 14px;
+    background: #49225b; /* Dark purple */
+    color: white;
+    text-align: center;
+    padding: 20px 10%;
+    border-radius: 0 0 10px 10px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #a56abd; /* Lighter purple link */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #f5ebfa; /* Light color on hover */
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    main {
+        padding: 40px 5%;
+    }
+
+    #resultCont {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .result-box {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}
